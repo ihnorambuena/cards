@@ -12,4 +12,5 @@ body {
   min-height: 100vh;
   background: var(--bg);
   font-family: var(--font);
+  user-select: none;
 }

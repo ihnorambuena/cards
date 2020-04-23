@@ -27,7 +27,7 @@ main {
 }
 
 /* .card-container:hover .tarjeta{
-  transform: rotateY(180deg);
+  transform: translateY(-10px);
 } */
 
 .tarjeta {
