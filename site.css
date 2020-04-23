@@ -1,0 +1,15 @@
+:root {
+  --bg: #fafafa;
+  --font: "Archivo", sans-serif;
+  /* --font-display: "Archivo Narrow", sans-serif; */
+  --softblue: #586FD0;
+  --purple: #7A48A4;
+  --gradient: linear-gradient(45deg, var(--softblue), var(--purple));
+}
+
+body {
+  margin: auto;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: var(--font);
+}

@@ -1,0 +1,131 @@
+body {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  /* position: relative; */
+}
+
+.mesa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  max-width: 50rem;
+}
+
+.card-container {
+  /* width: 200px;
+  height: 300px; */
+  /* background: peru; */
+}
+
+/* .card-container:hover .tarjeta{
+  transform: rotateY(180deg);
+} */
+
+.tarjeta {
+  /* -- STYLE -- */
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  /* -- OTHERS -- */
+  /* position: relative; */
+  transition: 1s;
+  /* backface-visibility: hidden; */
+  transform-style: preserve-3d;
+}
+
+
+.front {
+  border-radius: 8px;
+  background-image: var(--gradient);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front p {
+  margin:0;
+  text-align: center;
+  position: relative;
+  top: 29px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 19px;
+  backface-visibility: hidden;
+}
+
+.front span {
+  font-weight: 600;
+}
+
+.back {
+  /* -- POSITION -- */
+  position: absolute;
+  /* left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; */
+  height:100%;
+  width: 100%;
+  /* -- STYLE -- */
+  background: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: 2.5rem;
+  padding-top: 0.4rem;
+  box-sizing: border-box;
+  /* -- DISPLAY -- */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+
+.tarjeta.descubierta {
+  transform: rotateY(-180deg);
+}
+
+
+/* .tarjeta__contenido::selection {
+  background: transparent;
+} */
+
+/* .tarjeta:hover {
+  transform: rotateY(-180deg);
+} */
+
+/* .boton {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.boton p {
+  background: #48a473;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: 1s;
+}
+
+.boton p:hover {
+  background: #419e92;
+} */
