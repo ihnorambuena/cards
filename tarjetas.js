@@ -21,7 +21,8 @@ function repartirTarjetas() {
     var tarjeta = document.createElement("div");
     tarjeta.innerHTML =
       '<div class="card-container">'
-        + '<div class="tarjeta">'
+        + '<div class="tarjeta" data-valor= "'
+        + e + '">'
           + '<div class="front">'
             + "<p><span>IHN</span></br>Cards</p>"
           +'</div>'
@@ -38,7 +39,30 @@ repartirTarjetas();
 
 
 function descubrir() {
+  var totalDescubiertas = document.querySelectorAll(".descubierta");
+  // console.log(totalDescubiertas);
+
+  if (totalDescubiertas.length > 1) {
+    return
+  }
+
   this.classList.add("descubierta");
+
+  totalDescubiertas = document.querySelectorAll(".descubierta");
+  // console.log(totalDescubiertas);
+  if (totalDescubiertas.length < 2) {
+    return
+  }
+
+  // console.log(totalDescubiertas[0].textContent);
+  // console.log(totalDescubiertas[1].textContent);
+
+  if (totalDescubiertas[0].dataset.valor === totalDescubiertas[1].dataset.valor) {
+    console.log("acierto");
+  } else {
+    console.log("error");
+  }
+
 };
 
 function ocultar() {
