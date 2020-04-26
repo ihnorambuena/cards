@@ -100,6 +100,11 @@ main {
   transform: rotateY(-180deg);
 }
 
+.acertada {
+  border: solid 3px rgb(95, 215, 39);
+  border-radius: 8px;
+}
+
 
 /* .tarjeta__contenido::selection {
   background: transparent;
