@@ -57,26 +57,29 @@ function descubrir() {
   comparar (totalDescubiertas);
 };
 
-function comparar(cosaAComparar) {
-  if (cosaAComparar[0].dataset.valor === cosaAComparar[1].dataset.valor) {
-    acierto(cosaAComparar);
+function comparar(tarjetasAComparar) {
+  if (tarjetasAComparar[0].dataset.valor === tarjetasAComparar[1].dataset.valor) {
+    acierto(tarjetasAComparar);
   } else {
-    error(cosaAComparar);
+    error(tarjetasAComparar);
   }
 }
 
-function acierto (ayu) {
+function acierto(lasAcertadas) {
   console.log("acierto");
-  ayu.forEach(function(e) {
+  lasAcertadas.forEach(function(e) {
     e.classList.add("acertada");
   });
 }
 
-function error (eje) {
+function error(lasErroneas) {
   console.log("error");
-  eje.forEach(function(e) {
-    e.classList.remove("descubierta");
-  });
+
+  setTimeout(function () {
+    lasErroneas.forEach(function(e) {
+      e.classList.remove("descubierta");
+    });
+  }, 1000);
 }
 
 // function ocultar() {
