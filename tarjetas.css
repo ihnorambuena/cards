@@ -4,6 +4,26 @@ body {
   flex-direction: column;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  color: var(--softblue);
+  height: 30px;
+  /* border-bottom: 1px solid black; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat', sans-serif;
+}
+
+header h1, .contador, .tiempo {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px;
+  text-align: center;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -102,7 +122,7 @@ main {
 
 .acertada {
   border: solid 3px rgb(95, 215, 39);
-  border-radius: 8px;
+  border-radius: 11px;
 }
 
 
