@@ -7,10 +7,13 @@ function acierto(lasAcertadas) {
 
 function error(lasErroneas) {
   console.log("error");
-
+  lasErroneas.forEach(function(e) {
+    e.classList.add("error");
+  });
   setTimeout(function () {
     lasErroneas.forEach(function(e) {
       e.classList.remove("descubierta");
+      e.classList.remove("error");
     });
-  }, 1000);
+  }, 1400);
 }
