@@ -5,4 +5,5 @@ document.querySelectorAll(".tarjeta").forEach(function(e) {
   // e.addEventListener("click", tarjetasDescubiertas);
 });
 
-iniciarCronometro();
+// iniciarCronometro();
+iniciarTemporizador();

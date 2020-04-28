@@ -17,12 +17,18 @@ header {
   font-family: 'Montserrat', sans-serif;
 }
 
-header h1, .contador, .tiempo {
+header h1, #contador, #tiempo {
   font-size: 20px;
   font-weight: 600;
   margin: 10px;
   text-align: center;
+  /* background: black; */
 }
+
+#tiempo, #contador {
+  width: 100px;
+}
+
 
 main {
   display: flex;
