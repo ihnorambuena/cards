@@ -14,7 +14,8 @@ function descubrir() {
     return
   }
 
-  comparar (totalDescubiertas);
+  comparar(totalDescubiertas);
+  actualizaMovimientos();
 };
 
 function comparar(tarjetasAComparar) {
