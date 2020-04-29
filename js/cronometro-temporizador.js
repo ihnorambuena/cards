@@ -33,6 +33,7 @@ function iniciarTemporizador () {
   var segundos = 0;
   var textoMinutos;
   var textoSegundos;
+  var temporizador;
   console.log("Temporizador de "+minutos+" minutos y "+segundos+" segundos iniciado");
 
   function actualizarContador (){
@@ -61,5 +62,5 @@ function iniciarTemporizador () {
     document.querySelector("#segundos").innerText = textoSegundos;
   }
 
-  temporizador=setInterval(actualizarContador, 1000);
+  temporizador = setInterval(actualizarContador, 1000);
 }

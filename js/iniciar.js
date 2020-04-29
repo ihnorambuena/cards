@@ -1,3 +1,4 @@
+movimientos = 0;
 repartirTarjetas();
 
 document.querySelectorAll(".tarjeta").forEach(function(e) {
@@ -5,5 +6,5 @@ document.querySelectorAll(".tarjeta").forEach(function(e) {
   // e.addEventListener("click", tarjetasDescubiertas);
 });
 
-// iniciarCronometro();
-iniciarTemporizador();
+iniciarCronometro();
+// iniciarTemporizador();
