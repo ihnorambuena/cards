@@ -8,7 +8,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px;
   background: white;
   color: var(--softblue);
   height: 30px;
@@ -26,7 +26,7 @@ header h1, #contador, #tiempo {
 }
 
 #tiempo, #contador {
-  width: 100px;
+  width: 60px;
 }
 
 
@@ -162,7 +162,6 @@ main {
     animation: error 0.8s;
     animation-delay: 0.5s;
 }
-
 
 
 
