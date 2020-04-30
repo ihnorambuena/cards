@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   background: var(--bg);
   background-image: url(img/animals-2.png);
-  background-size: 280px;
+  background-size: 230px;
   font-family: var(--font);
   user-select: none;
 }
