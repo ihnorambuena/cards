@@ -81,8 +81,51 @@ main {
   backface-visibility: hidden;
 }
 
+.mensaje {
+  background-image: var(--gradient);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  margin:10px;
+}
+
+.mensaje h2, p {
+  margin: 10px 0;
+}
+
+.boton {
+  color: white;
+  text-decoration: none;
+  color: var(--softblue);
+  background: white;
+  border-radius: 5px;
+  padding: 20px 25px;
+  margin: 8px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.boton:hover {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.1);
+  /* color: white; */
+  border-radius: 10px;
+}
+
+.boton:hover {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+  /* color: white; */
+}
+
 .front p {
-  margin:0;
+  margin: 0;
   text-align: center;
   position: relative;
   top: 29px;
