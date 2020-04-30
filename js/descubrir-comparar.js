@@ -16,10 +16,16 @@ function descubrir() {
 
   comparar(totalDescubiertas);
   actualizaMovimientos();
+
+  totalPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
+  if (totalPendientes.length === 0){
+    estadoCronometro="detenido";
+    setTimeout(finalizar, 1000);
+  }
 };
 
 function comparar(tarjetasAComparar) {
-  if (tarjetasAComparar[0].dataset.valor === tarjetasAComparar[1].dataset.valor) {
+  if (tarjetasAComparar[0].dataset.nombre === tarjetasAComparar[1].dataset.nombre) {
     acierto(tarjetasAComparar);
   } else {
     error(tarjetasAComparar);

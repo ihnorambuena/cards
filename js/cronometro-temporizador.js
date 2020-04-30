@@ -21,11 +21,15 @@ function iniciarCronometro () {
       textoSegundos="0"+segundos;
     }
 
+    console.log(textoMinutos + ":" + textoSegundos);
     document.querySelector("#minutos").innerText = textoMinutos;
     document.querySelector("#segundos").innerText = textoSegundos;
+    if (estadoCronometro==="detenido") {
+      clearInterval(cronometro);
+    }
   }
 
-  setInterval(actualizarContador, 1000);
+  cronometro = setInterval(actualizarContador, 1000);
 }
 
 function iniciarTemporizador () {

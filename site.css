@@ -11,6 +11,8 @@ body {
   margin: auto;
   min-height: 100vh;
   background: var(--bg);
+  background-image: url(img/animals-2.png);
+  background-size: 280px;
   font-family: var(--font);
   user-select: none;
 }
