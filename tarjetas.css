@@ -90,6 +90,7 @@ main {
   font-size: 22px;
   text-align: center;
   margin:10px;
+  max-width: 375px;
 }
 
 .mensaje h2, p {
@@ -165,10 +166,13 @@ main {
   backface-visibility: hidden;
 }
 
+.back img {
+  width: 50px;
+}
+
 .tarjeta.descubierta {
   transform: rotateY(-180deg);
 }
-
 
 
 /* ANIMACIONES */
@@ -206,6 +210,9 @@ main {
     animation-delay: 0.5s;
 }
 
+.finalizado span {
+  font-weight: 600;
+}
 
 
 /* .tarjeta__contenido::selection {
