@@ -11,8 +11,17 @@ body {
   margin: auto;
   min-height: 100vh;
   background: var(--bg);
-  background-image: url(img/animals-2.png);
-  background-size: 230px;
   font-family: var(--font);
   user-select: none;
+}
+
+.bg-body {
+  background-image: url(img/animals-2.png) !important;
+  background-size: 300px;
+}
+
+@media screen and (max-width: 400px){
+  .bg-body {
+    background-size: 230px;
+  }
 }

@@ -3,7 +3,10 @@ function finalizar (){
   var tiempoFinal = document.querySelector("#tiempo").innerText;
   var movFinal = document.querySelector("#mov").innerText;
 
-  document.querySelector("#body").style.backgroundImage="url(img/animals-2.png)";
+  // document.querySelector("#body").style.backgroundImage="url(img/animals-2.png)";
+
+  document.querySelector("#body").classList.add("bg-body");
+
 
   mesa.innerHTML=
     '<div class="card-container">'
