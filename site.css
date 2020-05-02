@@ -16,19 +16,12 @@ body {
 }
 
 .bg-body {
-  background-image: url(img/animals-2.png);
+  background-image: url(img/animals.png);
   background-size: 300px;
 }
 
-/* @media screen and (max-width: 400px){
-  .bg-body {
-    background-size: 300px;
-    background-image: url(img/animals-2.png) !important;
-  }
-} */
-
 @media screen and (min-resolution: 2dppx) {
-  body {
-    background:red;
+  .bg-body {
+    background-image: url(img/animals@2x.png);
   }
 }
