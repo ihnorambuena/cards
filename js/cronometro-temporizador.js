@@ -21,7 +21,7 @@ function iniciarCronometro () {
       textoSegundos="0"+segundos;
     }
 
-    console.log(textoMinutos + ":" + textoSegundos);
+    // console.log(textoMinutos + ":" + textoSegundos);
     document.querySelector("#minutos").innerText = textoMinutos;
     document.querySelector("#segundos").innerText = textoSegundos;
     if (estadoCronometro==="detenido") {

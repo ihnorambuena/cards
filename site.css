@@ -25,3 +25,7 @@ body {
     background-image: url(img/animals@2x.png);
   }
 }
+
+.sonido {
+  display: none;
+}

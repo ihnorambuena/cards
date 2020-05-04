@@ -179,7 +179,7 @@ main {
 
 @keyframes error {
   /* 0% {
-    transform: rotateY(-180deg) translateX(0px);
+    transform: rotateY(-80deg) translateX(0px);
   } */
   10%, 90% {
     transform: rotateY(-180deg) translateX(-1px);
@@ -206,8 +206,8 @@ main {
 
 .error {
     /* animation: error 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; */
-    animation: error 0.8s;
-    animation-delay: 0.5s;
+    animation: error 0.6s;
+    animation-delay: 0.3s;
 }
 
 .finalizado span {

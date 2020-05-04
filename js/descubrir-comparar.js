@@ -7,6 +7,7 @@ function descubrir() {
   }
 
   this.classList.add("descubierta");
+  document.querySelector("#son-giro").cloneNode().play();
 
   totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
 
