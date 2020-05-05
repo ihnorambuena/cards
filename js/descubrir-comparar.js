@@ -1,4 +1,4 @@
-function descubrir() {
+function descubrir(e) {
   var totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
   // console.log(totalDescubiertas);
 
@@ -6,7 +6,12 @@ function descubrir() {
     return
   }
 
-  this.classList.add("descubierta");
+  if (e.attributes) {
+    e.classList.add("descubierta");
+  } else {
+    this.classList.add("descubierta");
+  }
+
   document.querySelector("#son-giro").cloneNode().play();
 
   totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
