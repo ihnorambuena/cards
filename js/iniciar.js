@@ -5,7 +5,8 @@ function iniciar () {
 
   document.querySelector("#body").classList.remove("bg-body");
   document.querySelector("#mov").innerText="00";
-  document.querySelector("#tiempo").innerHTML='<span id="minutos">00</span>:<span id="segundos">00</span>';
+  document.querySelector("#minutos").innerText = "00";
+  document.querySelector("#segundos").innerText = "00";
 
   document.querySelectorAll(".tarjeta").forEach(function(e) {
     e.addEventListener("click", descubrir);

@@ -7,7 +7,6 @@ function finalizar (){
 
   document.querySelector("#body").classList.add("bg-body");
 
-
   mesa.innerHTML=
     '<div class="card-container">'
     + '<div class="mensaje finalizado">'

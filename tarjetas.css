@@ -17,17 +17,22 @@ header {
   font-family: 'Montserrat', sans-serif;
 }
 
-header h1, #contador, #tiempo {
+header p {
+  font-size: 10px;
+  margin: 0;
+  text-transform: uppercase;
+  color:rgb(94, 103, 115);
+}
+
+#contador, #tiempo, #niveles {
   font-size: 20px;
   font-weight: 600;
   margin: 10px;
   text-align: center;
   /* background: black; */
+  width: 80px;
 }
 
-#tiempo, #contador {
-  width: 60px;
-}
 
 
 main {
@@ -37,7 +42,7 @@ main {
   /* position: relative; */
 }
 
-.mesa {
+.mesa, #mesaDeMensajes {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -82,6 +87,7 @@ main {
 }
 
 .mensaje {
+  display: none;
   background-image: var(--gradient);
   color: white;
   padding: 10px 20px;
@@ -90,7 +96,11 @@ main {
   font-size: 22px;
   text-align: center;
   margin:10px;
-  max-width: 375px;
+  max-width: 385px;
+}
+
+.mensaje.visible {
+  display: block;
 }
 
 .mensaje h2, p {
@@ -120,9 +130,15 @@ main {
   border-radius: 10px;
 }
 
-.boton:hover {
-  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
-  /* color: white; */
+.btn-secundario {
+  border: solid 1px white;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.btn-secundario:hover {
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: none;
 }
 
 .front p {
