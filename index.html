@@ -2,14 +2,33 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FAVICON -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Tarjetas</title>
     <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,600&display=swap" rel="stylesheet">
-    <link href="tarjetas.css" rel="stylesheet">
-    <link href="site.css" rel="stylesheet" />
+    <link href="tarjetas.css?t=57" rel="stylesheet">
+    <link href="site.css?t=57" rel="stylesheet" />
   </head>
-  <body>
+  <body id="body" class="bg-body">
     <header>
       <div id="contador">
         <span id="mov">00</span><!--/<span id="mov-max">20</span> -->
@@ -22,24 +41,26 @@
     <main>
       <div id="mesa" class="mesa">
         <div class="card-container">
-          <div class="tarjeta">
-            <div class="front">
-              <p><span>IHN</span></br>Cards</p>
-            </div>
-            <div class="back">
-              😀
-            </div>
+          <div class="mensaje">
+            <h2>Bienvenido 👋🏻 </h2>
+            <p>Inicia el juego aquí</p>
+            <a class="boton iniciaJuego">Iniciar Juego</a>
           </div>
         </div>
       </div>
     </main>
 
-    <script src="js/variables-globales.js" async defer></script>
-    <script src="js/baraja-reparte.js" async defer></script>
-    <script src="js/descubrir-comparar.js" async defer></script>
-    <script src="js/acierto-error.js" async defer></script>
-    <script src="js/cronometro-temporizador.js" async defer></script>
-    <script src="js/contador-movimientos.js" async defer></script>
-    <script src="js/iniciar.js" async defer></script>
+    <audio src="sounds/yes.wav" class="sonido" id="son-yes" preload="auto"></audio>
+    <audio src="sounds/no.wav" class="sonido" id="son-no" preload="auto"></audio>
+    <audio src="sounds/giro.wav" class="sonido" id="son-giro" preload="auto" ></audio>
+
+    <script src="js/variables-globales.js?t=57" async defer></script>
+    <script src="js/baraja-reparte.js?t=57" async defer></script>
+    <script src="js/descubrir-comparar.js?t=57" async defer></script>
+    <script src="js/acierto-error.js?t=57" async defer></script>
+    <script src="js/cronometro-temporizador.js?t=57" async defer></script>
+    <script src="js/contador-movimientos.js?t=57" async defer></script>
+    <script src="js/finalizar.js?t=57" async defer></script>
+    <script src="js/iniciar.js?t=57" async defer></script>
   </body>
 </html>

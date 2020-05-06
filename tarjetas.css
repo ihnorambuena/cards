@@ -8,7 +8,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px;
   background: white;
   color: var(--softblue);
   height: 30px;
@@ -26,7 +26,7 @@ header h1, #contador, #tiempo {
 }
 
 #tiempo, #contador {
-  width: 100px;
+  width: 60px;
 }
 
 
@@ -81,8 +81,52 @@ main {
   backface-visibility: hidden;
 }
 
+.mensaje {
+  background-image: var(--gradient);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  margin:10px;
+  max-width: 375px;
+}
+
+.mensaje h2, p {
+  margin: 10px 0;
+}
+
+.boton {
+  color: white;
+  text-decoration: none;
+  color: var(--softblue);
+  background: white;
+  border-radius: 5px;
+  padding: 20px 25px;
+  margin: 8px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.boton:hover {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.1);
+  /* color: white; */
+  border-radius: 10px;
+}
+
+.boton:hover {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+  /* color: white; */
+}
+
 .front p {
-  margin:0;
+  margin: 0;
   text-align: center;
   position: relative;
   top: 29px;
@@ -105,7 +149,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0; */
-  height:100%;
+  height: 100%;
   width: 100%;
   /* -- STYLE -- */
   /* background: white; */
@@ -122,14 +166,64 @@ main {
   backface-visibility: hidden;
 }
 
+.back img {
+  width: 50px;
+}
+
+.key-name {
+  position: absolute;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  font-size: 20px;
+  border-radius: 0 8px;
+  color: white;
+}
+
 .tarjeta.descubierta {
   transform: rotateY(-180deg);
 }
+
+
+/* ANIMACIONES */
+
+@keyframes error {
+  /* 0% {
+    transform: rotateY(-80deg) translateX(0px);
+  } */
+  10%, 90% {
+    transform: rotateY(-180deg) translateX(-1px);
+  }
+  20%, 80%{
+    transform: rotateY(-180deg) translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: rotateY(-180deg) translateX(-4px);
+  }
+  40%, 60% {
+    transform: rotateY(-180deg) translateX(4px);
+  }
+  /* 100% {
+    transform: rotateY(0deg) translateX(0px);
+  } */
+}
+
 
 .acertada {
   border-radius: 8px;
   box-shadow: inset 0 0 0 3px rgb(95, 215, 39);
 }
+
+.error {
+    /* animation: error 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; */
+    animation: error 0.6s;
+    animation-delay: 0.3s;
+}
+
+.finalizado span {
+  font-weight: 600;
+}
+
 
 
 /* .tarjeta__contenido::selection {

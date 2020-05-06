@@ -14,3 +14,18 @@ body {
   font-family: var(--font);
   user-select: none;
 }
+
+.bg-body {
+  background-image: url(img/animals.png);
+  background-size: 300px;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .bg-body {
+    background-image: url(img/animals@2x.png);
+  }
+}
+
+.sonido {
+  display: none;
+}

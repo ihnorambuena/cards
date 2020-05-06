@@ -1,4 +1,4 @@
-function descubrir() {
+function descubrir(e) {
   var totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
   // console.log(totalDescubiertas);
 
@@ -6,7 +6,13 @@ function descubrir() {
     return
   }
 
-  this.classList.add("descubierta");
+  if (e.attributes) {
+    e.classList.add("descubierta");
+  } else {
+    this.classList.add("descubierta");
+  }
+
+  document.querySelector("#son-giro").cloneNode().play();
 
   totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
 
@@ -16,10 +22,16 @@ function descubrir() {
 
   comparar(totalDescubiertas);
   actualizaMovimientos();
+
+  totalPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
+  if (totalPendientes.length === 0){
+    estadoCronometro="detenido";
+    setTimeout(finalizar, 1000);
+  }
 };
 
 function comparar(tarjetasAComparar) {
-  if (tarjetasAComparar[0].dataset.valor === tarjetasAComparar[1].dataset.valor) {
+  if (tarjetasAComparar[0].dataset.nombre === tarjetasAComparar[1].dataset.nombre) {
     acierto(tarjetasAComparar);
   } else {
     error(tarjetasAComparar);
