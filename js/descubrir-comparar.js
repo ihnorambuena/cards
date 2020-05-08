@@ -22,6 +22,9 @@ function descubrir(e) {
 
   comparar(totalDescubiertas);
   actualizaMovimientos();
+  if (movimientos>niveles[nivelActual].movimientosMax) {
+    return;
+  }
 
   totalPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
   if (totalPendientes.length === 0){

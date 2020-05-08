@@ -2,6 +2,7 @@ function iniciar () {
   movimientos = 0;
   estadoCronometro = "iniciado";
   repartirTarjetas(niveles[nivelActual].tarjetas);
+  maxMovimientos();
 
   document.querySelector("#finalizado").classList.remove("visible");
   document.querySelector("#subeNivel").classList.remove("visible");
@@ -10,7 +11,6 @@ function iniciar () {
   document.querySelector("#mov").innerText="00";
   document.querySelector("#minutos").innerText = "00";
   document.querySelector("#segundos").innerText = "00";
-  // document.qurySelector("")
 
   document.querySelectorAll(".tarjeta").forEach(function(e) {
     e.addEventListener("click", descubrir);
@@ -28,8 +28,13 @@ function reiniciar() {
   iniciar();
 }
 
+
 document.querySelectorAll(".reiniciaJuego").forEach(function(e){
   e.addEventListener ("click", reiniciar);
+});
+
+document.querySelectorAll(".reiniciaNivel").forEach(function(e){
+  e.addEventListener ("click", iniciar);
 });
 
 document.querySelectorAll(".subeNivel").forEach(function(e){

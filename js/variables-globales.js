@@ -12,9 +12,9 @@ var animales = [
 
 var nivelActual = 0;
 var niveles = [
-  {tarjetas: animales[0]},
-  {tarjetas: animales[0].concat(animales[1])},
-  {tarjetas: animales[0].concat(animales[1], animales[2])}
+  {tarjetas: animales[0], movimientosMax:3},
+  {tarjetas: animales[0].concat(animales[1]), movimientosMax:8},
+  {tarjetas: animales[0].concat(animales[1], animales[2]), movimientosMax:12}
 ];
 
 var movimientos = 0;

@@ -96,7 +96,11 @@ main {
   font-size: 22px;
   text-align: center;
   margin:10px;
-  max-width: 385px;
+  max-width: 450px;
+}
+
+.max-width-S {
+  max-width: 300px;
 }
 
 .mensaje.visible {
