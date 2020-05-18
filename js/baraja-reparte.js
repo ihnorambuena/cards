@@ -1,15 +1,16 @@
-function barajarTarjetas () {
+function barajarTarjetas (tarjetasABarajar) {
   var resultado;
-  resultado = dobleDeEmoticonos.sort(
+  var dobleDeTarjetas = tarjetasABarajar.concat(tarjetasABarajar);
+  resultado = dobleDeTarjetas.sort(
     function() {
       return 0.5 - Math.random();
   });
   return resultado;
 };
 
-function repartirTarjetas() {
+function repartirTarjetas(tarjetasARepartir) {
   var mesa = document.querySelector("#mesa");
-  var tarjetasBarajadas = barajarTarjetas();
+  var tarjetasBarajadas = barajarTarjetas(tarjetasARepartir);
 
   mesa.innerHTML = "";
 
@@ -22,7 +23,7 @@ function repartirTarjetas() {
           + '<div class="front">'
             + '<div class="key-name"></div>'
             + '<p><span>IHN</span></br>Cards</p>'
-          +'</div>'
+          + '</div>'
           + '<div class="back">'
             + '<img src="img/animals/' + e.img +'"/>'
           + '</div>'
@@ -39,7 +40,7 @@ function repartirTarjetas() {
     || navigator.userAgent.match(/Windows Phone/i) ) {
     console.log("Estás en Mobile");
     } else {
-      asignarKeyName();
+      // asignarKeyName();
       console.log("Estás en Desktop");
   };
 };

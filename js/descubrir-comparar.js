@@ -24,10 +24,24 @@ function descubrir(e) {
   actualizaMovimientos();
 
   totalPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
+
   if (totalPendientes.length === 0){
     estadoCronometro="detenido";
-    setTimeout(finalizar, 1000);
+    setTimeout(function() {
+      finalizar("modoGanador");
+    }, 1000);
+    return;
   }
+
+
+  if (movimientos >= niveles[nivelActual].movimientosMax) {
+    estadoCronometro = "detenido";
+    setTimeout(function() {
+      finalizar("modoSinMovimientos");
+    }, 1000);
+    return;
+  }
+
 };
 
 function comparar(tarjetasAComparar) {

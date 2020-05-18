@@ -8,3 +8,11 @@ function actualizaMovimientos () {
 
   document.querySelector("#mov").innerText = textoMovimientos;
 }
+
+function maxMovimientos() {
+  var textoMaxMov = niveles[nivelActual].movimientosMax;
+  if (textoMaxMov<10) {
+    textoMaxMov = "0" + textoMaxMov;
+  }
+  document.querySelector("#mov-max").innerText = textoMaxMov;
+}

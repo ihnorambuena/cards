@@ -1,32 +1,50 @@
 function iniciar () {
   movimientos = 0;
   estadoCronometro = "iniciado";
-  repartirTarjetas();
+  repartirTarjetas(niveles[nivelActual].tarjetas);
+  maxMovimientos();
 
+  document.querySelector("#finalizado").classList.remove("visible");
+  document.querySelector("#subeNivel").classList.remove("visible");
+  document.querySelector("#endGame").classList.remove("visible");
+  document.querySelector("#gameOverMov").classList.remove("visible");
+  document.querySelector("#gameOverTime").classList.remove("visible");
   document.querySelector("#body").classList.remove("bg-body");
   document.querySelector("#mov").innerText="00";
-  document.querySelector("#tiempo").innerHTML='<span id="minutos">00</span>:<span id="segundos">00</span>';
+  document.querySelector("#minutos").innerText = "00";
+  document.querySelector("#segundos").innerText = "00";
 
   document.querySelectorAll(".tarjeta").forEach(function(e) {
     e.addEventListener("click", descubrir);
-    // e.addEventListener("click", tarjetasDescubiertas);
   });
 
   iniciarCronometro();
   // iniciarTemporizador();
+
+  document.addEventListener("keydown", laTecla);
 }
 
-function botonIniciar (){
-  document.querySelectorAll(".iniciaJuego").forEach(function(e){
-    e.addEventListener ("click", iniciar);
-  });
+function reiniciar() {
+  nivelActual = 0;
+  actualizaNivel();
+  iniciar();
 }
 
-botonIniciar();
+
+document.querySelectorAll(".reiniciaJuego").forEach(function(e){
+  e.addEventListener ("click", reiniciar);
+});
+
+document.querySelectorAll(".reiniciaNivel").forEach(function(e){
+  e.addEventListener ("click", iniciar);
+});
+
+document.querySelectorAll(".subeNivel").forEach(function(e){
+  e.addEventListener ("click", cargaNuevoNivel);
+});
+
 
 // ----------------------------
-
-document.addEventListener("keydown", laTecla);
 
 function laTecla (e) {
   // console.log(e.key);
