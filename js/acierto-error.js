@@ -8,7 +8,6 @@ function acierto(lasAcertadas) {
 
 function error(lasErroneas) {
   console.log("error");
-
   lasErroneas.forEach(function(e) {
     e.classList.add("error");
   });
@@ -18,17 +17,17 @@ function error(lasErroneas) {
     e.style.transition = ".3s";
   });
 
-  setTimeout(function(){
+  setTimeout(function() {
     document.querySelector("#son-no").cloneNode().play()
   }, 400)
-  setTimeout(function () {
+  setTimeout(function() {
     lasErroneas.forEach(function(e) {
       e.classList.remove("descubierta");
       e.classList.remove("error");
     });
   }, 1000);
 
-  setTimeout(function () {
+  setTimeout(function() {
     document.querySelectorAll(".tarjeta").forEach(function(e){
       // e.style.background = "red";
       e.style.transition = "1s";

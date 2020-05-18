@@ -7,6 +7,8 @@ function iniciar () {
   document.querySelector("#finalizado").classList.remove("visible");
   document.querySelector("#subeNivel").classList.remove("visible");
   document.querySelector("#endGame").classList.remove("visible");
+  document.querySelector("#gameOverMov").classList.remove("visible");
+  document.querySelector("#gameOverTime").classList.remove("visible");
   document.querySelector("#body").classList.remove("bg-body");
   document.querySelector("#mov").innerText="00";
   document.querySelector("#minutos").innerText = "00";

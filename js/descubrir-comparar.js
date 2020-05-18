@@ -22,15 +22,26 @@ function descubrir(e) {
 
   comparar(totalDescubiertas);
   actualizaMovimientos();
-  if (movimientos>niveles[nivelActual].movimientosMax) {
+
+  totalPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
+
+  if (totalPendientes.length === 0){
+    estadoCronometro="detenido";
+    setTimeout(function() {
+      finalizar("modoGanador");
+    }, 1000);
     return;
   }
 
-  totalPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
-  if (totalPendientes.length === 0){
-    estadoCronometro="detenido";
-    setTimeout(finalizar, 1000);
+
+  if (movimientos >= niveles[nivelActual].movimientosMax) {
+    estadoCronometro = "detenido";
+    setTimeout(function() {
+      finalizar("modoSinMovimientos");
+    }, 1000);
+    return;
   }
+
 };
 
 function comparar(tarjetasAComparar) {

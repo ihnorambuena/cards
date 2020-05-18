@@ -2,11 +2,6 @@ function actualizaMovimientos () {
   movimientos++;
   var textoMovimientos = movimientos;
 
-  if (movimientos>niveles[nivelActual].movimientosMax) {
-    finalizar("modoPerdedor");
-    return;
-  }
-
   if (movimientos < 10) {
     textoMovimientos = '0' + movimientos;
   }
