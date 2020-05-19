@@ -1,6 +1,7 @@
 function iniciar () {
   movimientos = 0;
   estadoCronometro = "iniciado";
+  estadoDePartida = "andando";
   repartirTarjetas(niveles[nivelActual].tarjetas);
   maxMovimientos();
 

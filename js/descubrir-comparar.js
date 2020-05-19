@@ -1,8 +1,7 @@
 function descubrir(e) {
   var totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
-  // console.log(totalDescubiertas);
 
-  if (totalDescubiertas.length > 1) {
+  if ((totalDescubiertas.length > 1) || (estadoDePartida === "detenido")) {
     return
   }
 
@@ -26,20 +25,22 @@ function descubrir(e) {
   totalPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
 
   if (totalPendientes.length === 0){
-    estadoCronometro="detenido";
+    estadoCronometro = "detenido";
+    estadoDePartida = "detenido";
     setTimeout(function() {
       finalizar("modoGanador");
     }, 1000);
-    return;
+    return
   }
 
 
   if (movimientos >= niveles[nivelActual].movimientosMax) {
     estadoCronometro = "detenido";
+    estadoDePartida = "detenido";
     setTimeout(function() {
       finalizar("modoSinMovimientos");
     }, 1000);
-    return;
+    return
   }
 
 };

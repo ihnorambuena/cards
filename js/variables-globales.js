@@ -19,3 +19,4 @@ var niveles = [
 
 var movimientos = 0;
 var estadoCronometro = "iniciado";
+var estadoDePartida = "andando";
