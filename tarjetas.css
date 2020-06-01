@@ -6,25 +6,49 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  height: 50px !important;
   background: white;
-  color: var(--softblue);
   height: 30px;
   /* border-bottom: 1px solid black; */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  background: white;
+  color: var(--softblue);
   font-family: 'Montserrat', sans-serif;
 }
 
-header p {
+.header p {
   font-size: 10px;
   margin: 0;
   text-transform: uppercase;
   color:rgb(94, 103, 115);
 }
 
-#contador, #tiempo, #niveles {
+.btn-config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(55, 61, 73);
+  cursor: pointer;
+}
+
+.btn-config:hover {
+  background-color: rgb(103, 111, 129);
+}
+
+#niveles {
+  cursor: pointer;
+}
+
+.header-element {
   font-size: 20px;
   font-weight: 600;
   margin: 10px;
@@ -33,7 +57,48 @@ header p {
   width: 80px;
 }
 
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu-config{
+  display: none;
+  background: rgba(88, 111, 208, 0.99);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-config > div {
+  /* background: peru; */
+  margin: 5px;
+}
+
+.titulo h1 {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.menu-config.visible {
+  display: flex
+}
 
 main {
   display: flex;
@@ -42,7 +107,7 @@ main {
   /* position: relative; */
 }
 
-.mesa, #mesaDeMensajes {
+.mesa {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -73,7 +138,6 @@ main {
   /* backface-visibility: hidden; */
   transform-style: preserve-3d;
 }
-
 
 .front {
   border-radius: 8px;
@@ -228,6 +292,27 @@ main {
   } */
 }
 
+@keyframes pista {
+  /* 0% {
+    transform: rotateY(-80deg) translateX(0px);
+  } */
+  10%, 90% {
+    transform: translateY(-1px);
+  }
+  20%, 80%{
+    transform: translateY(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateY(-4px);
+  }
+  40%, 60% {
+    transform: translateY(4px);
+  }
+  /* 100% {
+    transform: rotateY(0deg) translateX(0px);
+  } */
+}
+
 
 .acertada {
   border-radius: 8px;
@@ -238,6 +323,10 @@ main {
     /* animation: error 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; */
     animation: error 0.6s;
     animation-delay: 0.3s;
+}
+
+.pista {
+  animation: pista 1s;
 }
 
 .finalizado span {

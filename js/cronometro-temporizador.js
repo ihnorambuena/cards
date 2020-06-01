@@ -32,9 +32,9 @@ function iniciarCronometro () {
   cronometro = setInterval(actualizarContador, 1000);
 }
 
-function iniciarTemporizador () {
-  var minutos = 1;
-  var segundos = 0;
+function iniciarTemporizador (min, seg) {
+  var minutos = min;
+  var segundos = seg;
   var textoMinutos;
   var textoSegundos;
   var temporizador;
@@ -50,7 +50,9 @@ function iniciarTemporizador () {
     if (minutos<0) {
       minutos = 0;
       segundos = 0;
-      clearInterval(temporizador);
+      estadoTemporizador="detenido";
+      finalizar("modoSinTiempo");
+      estadoDePartida = "detenido";
     }
     textoMinutos=minutos;
     textoSegundos=segundos;
@@ -64,6 +66,9 @@ function iniciarTemporizador () {
 
     document.querySelector("#minutos").innerText = textoMinutos;
     document.querySelector("#segundos").innerText = textoSegundos;
+    if (estadoTemporizador==="detenido") {
+      clearInterval(temporizador);
+    }
   }
 
   temporizador = setInterval(actualizarContador, 1000);

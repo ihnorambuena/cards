@@ -24,23 +24,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Tarjetas</title>
     <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,600&display=swap" rel="stylesheet">
     <link href="tarjetas.css?t=59" rel="stylesheet">
     <link href="site.css?t=59" rel="stylesheet" />
   </head>
   <body id="body" class="bg-body">
     <header>
-      <div id="contador">
-        <p>Movimientos</p>
-        <span id="mov">00</span>/<span id="mov-max">03</span>
+      <div class="header">
+        <div class="flex-left header-element">
+          <div id="contador">
+            <p>Movimientos</p>
+            <span id="mov">00</span>/<span id="mov-max">03</span>
+          </div>
+        </div>
+        <div id="tiempo" class="header-element">
+          <p>Temporizador</p>
+          <span id="minutos">00</span>:<span id="segundos">00</span>
+        </div>
+        <div class="flex-right header-element">
+          <div id="niveles">
+            <p>Nivel</p>
+            <span id="nivel">01</span>
+          </div>
+        </div>
       </div>
-      <div id="tiempo">
-        <p>Cronómetro</p>
-        <span id="minutos">00</span>:<span id="segundos">00</span>
-      </div>
-      <div id="niveles">
-        <p>Nivel</p>
-        <span id="nivel">01</span>
+      <div id="botonConfig" class="btn-config">
+        <img src="img/config.svg" alt="" width="25px">
       </div>
     </header>
     <main>
@@ -51,7 +60,7 @@
           <a class="boton reiniciaJuego">Iniciar Juego</a>
         </div>
       </div>
-      <div id="mesaDeMensajes">
+      <div id="mesaDeMensajes" class="mesa">
         <div id="finalizado" class="mensaje finalizado">
           <h2>¡Bien Hecho!</h2>
           <p>Tu tiempo fue <span id="tiempoFinal">tiempoFinal</span> y lo lograste en <span id="movFinal">movFinal</span> <span>movimientos</span></p>
@@ -79,6 +88,19 @@
           <h2>¡Genial! Te diste vuelta el juego</h2>
           <p>Sos un crack</p>
           <a class="boton reiniciaJuego">¿Reiniciar?</a>
+        </div>
+      </div>
+      <div id="menuConfig" class="menu-config">
+        <div class="titulo">
+          <h1>Menú de Configuración</h1>
+        </div>
+        <div class="">
+          <ul>
+            <li>Modo de Juego</li>
+            <li>Pistas</li>
+            <li>Efectos de Sonido</li>
+            <li>Música</li>
+          </ul>
         </div>
       </div>
     </main>

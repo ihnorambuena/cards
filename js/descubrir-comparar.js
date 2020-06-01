@@ -15,6 +15,9 @@ function descubrir(e) {
 
   totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
 
+  if (estadoPista==="activo") {
+    pista();
+  }
   if (totalDescubiertas.length < 2) {
     return
   }
@@ -26,6 +29,7 @@ function descubrir(e) {
 
   if (totalPendientes.length === 0){
     estadoCronometro = "detenido";
+    estadoTemporizador = "detenido";
     estadoDePartida = "detenido";
     setTimeout(function() {
       finalizar("modoGanador");
@@ -33,9 +37,9 @@ function descubrir(e) {
     return
   }
 
-
   if (movimientos >= niveles[nivelActual].movimientosMax) {
     estadoCronometro = "detenido";
+    estadoTemporizador = "detenido";
     estadoDePartida = "detenido";
     setTimeout(function() {
       finalizar("modoSinMovimientos");
@@ -52,3 +56,23 @@ function comparar(tarjetasAComparar) {
     error(tarjetasAComparar);
   }
 };
+
+function activarPistas() {
+  estadoPista = "activo";
+  console.log(estadoPista);
+}
+
+function pista(){
+  carta = document.querySelectorAll(".descubierta:not(.acertada)");
+
+  dataNombre = carta[0].dataset.nombre;
+
+  cartaPar = document.querySelector('[data-nombre="'+dataNombre+'"]:not(.descubierta)');
+
+  if (cartaPar) {
+    cartaPar.classList.add("pista");
+    setTimeout(function() {
+      cartaPar.classList.remove("pista");
+    }, 1000);
+  }
+}
