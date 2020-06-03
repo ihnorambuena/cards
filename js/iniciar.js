@@ -24,7 +24,6 @@ function iniciar () {
   iniciarTemporizador(niveles[nivelActual].minMax, niveles[nivelActual].segMax);
 
   document.addEventListener("keydown", laTecla);
-  document.querySelector("#niveles").addEventListener("click", activarPistas)
 }
 
 function reiniciar() {
@@ -45,12 +44,6 @@ document.querySelectorAll(".reiniciaNivel").forEach(function(e){
 document.querySelectorAll(".subeNivel").forEach(function(e){
   e.addEventListener ("click", cargaNuevoNivel);
 });
-
-document.querySelector("#botonConfig").addEventListener ("click", abrirCerrar);
-
-function abrirCerrar () {
-  document.querySelector("#menuConfig").classList.toggle("visible");
-}
 
 
 // ----------------------------

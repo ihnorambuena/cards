@@ -25,8 +25,8 @@
     <title>Tarjetas</title>
     <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,600&display=swap" rel="stylesheet">
-    <link href="tarjetas.css?t=59" rel="stylesheet">
-    <link href="site.css?t=59" rel="stylesheet" />
+    <link href="tarjetas.css?t=60" rel="stylesheet">
+    <link href="site.css?t=60" rel="stylesheet" />
   </head>
   <body id="body" class="bg-body">
     <header>
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div id="botonConfig" class="btn-config">
-        <img src="img/config.svg" alt="" width="25px">
+        <img src="img/icons/config.svg" alt="" width="25px">
       </div>
     </header>
     <main>
@@ -94,12 +94,24 @@
         <div class="titulo">
           <h1>Menú de Configuración</h1>
         </div>
-        <div class="">
+        <div class="nav-menu">
           <ul>
-            <li>Modo de Juego</li>
-            <li>Pistas</li>
-            <li>Efectos de Sonido</li>
-            <li>Música</li>
+            <!-- <li id="inter-modoDeJuego" class="inter-box">
+              <p>Modo de Juego</p>
+              <div class="inter-icon i-next"></div>
+            </li> -->
+            <li id="inter-pista" class="inter-box inter-off">
+              <p class="inter-label">Pistas</p>
+              <div class="inter-icon i-pista"></div>
+            </li>
+            <li id="inter-son" class="inter-box inter-on">
+              <p class="inter-label">Efectos de Sonido</p>
+              <div class="inter-icon i-sound"></div>
+            </li>
+            <!-- <li id="inter-mus" class="inter-box inter-off">
+              <p class="inter-label">Música</p>
+              <div class="inter-icon i-sound"></div>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -109,14 +121,15 @@
     <audio src="sounds/no.wav" class="sonido" id="son-no" preload="auto"></audio>
     <audio src="sounds/giro.wav" class="sonido" id="son-giro" preload="auto" ></audio>
 
-    <script src="js/variables-globales.js?t=59" async defer></script>
-    <script src="js/baraja-reparte.js?t=59" async defer></script>
-    <script src="js/descubrir-comparar.js?t=59" async defer></script>
-    <script src="js/acierto-error.js?t=59" async defer></script>
-    <script src="js/cronometro-temporizador.js?t=59" async defer></script>
-    <script src="js/contador-movimientos.js?t=59" async defer></script>
-    <script src="js/cambia-nivel.js?t=59" async defer></script>
-    <script src="js/finalizar.js?t=59" async defer></script>
-    <script src="js/iniciar.js?t=59" async defer></script>
+    <script src="js/variables-globales.js?t=60" async defer></script>
+    <script src="js/menu-configuracion.js?t=60" async defer></script>
+    <script src="js/baraja-reparte.js?t=60" async defer></script>
+    <script src="js/descubrir-comparar.js?t=60" async defer></script>
+    <script src="js/acierto-error.js?t=60" async defer></script>
+    <script src="js/cronometro-temporizador.js?t=60" async defer></script>
+    <script src="js/contador-movimientos.js?t=60" async defer></script>
+    <script src="js/cambia-nivel.js?t=60" async defer></script>
+    <script src="js/finalizar.js?t=60" async defer></script>
+    <script src="js/iniciar.js?t=60" async defer></script>
   </body>
 </html>

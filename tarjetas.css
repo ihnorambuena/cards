@@ -44,17 +44,12 @@ header {
   background-color: rgb(103, 111, 129);
 }
 
-#niveles {
-  cursor: pointer;
-}
-
 .header-element {
   font-size: 20px;
   font-weight: 600;
   margin: 10px;
   text-align: center;
   /* background: black; */
-  width: 80px;
 }
 
 .flex-right {
@@ -94,10 +89,85 @@ header {
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .menu-config.visible {
   display: flex
+}
+
+.nav-menu ul{
+  padding: 0;
+}
+
+.nav-menu ul li{
+  list-style: none;
+  text-align: center;
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
+}
+
+.inter-label {
+  /* margin: 0; */
+}
+
+.inter-icon {
+  /* background: white; */
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.inter-box {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background: rgba(0, 0, 0, .3);
+  color: white;
+  padding: 0 10px;
+  margin: 10px 0;
+  border-radius: 3px;
+}
+
+.inter-box:hover {
+  background: rgba(0, 0, 0, .4);
+}
+
+.i-next {
+  background-image: url(img/icons/next.svg);
+}
+
+.inter-off {
+  background: #CECECE;
+  color: rgba(0, 0, 0, .3);
+}
+
+.inter-off .i-pista{
+  background-image: url(img/icons/pista-off.svg);
+}
+.inter-off .i-sound{
+  background-image: url(img/icons/sound-off.svg);
+}
+
+.inter-off:hover {
+  background: #EDEDED;
+}
+
+.inter-on {
+  background: #3BB66D;
+  color: white;
+}
+
+.inter-on .i-pista{
+  background-image: url(img/icons/pista-on.svg);
+}
+.inter-on .i-sound{
+  background-image: url(img/icons/sound-on.svg);
+}
+
+.inter-on:hover {
+  background: #36A864;
 }
 
 main {

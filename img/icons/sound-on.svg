@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="sound-on" transform="translate(-727 -604)">
+    <rect id="box-icon" width="30" height="30" transform="translate(727 604)" fill="#b1b1b1" opacity="0"/>
+    <g id="volume" transform="translate(735 609)">
+      <path id="Path_15" data-name="Path 15" d="M12.452,16.061a.712.712,0,0,0-.756.086L4.748,21.705H1.429A1.431,1.431,0,0,0,0,23.134v5.714a1.43,1.43,0,0,0,1.429,1.429h3.32L11.7,35.835a.715.715,0,0,0,.757.084.713.713,0,0,0,.4-.643V16.705A.717.717,0,0,0,12.452,16.061Z" transform="translate(0 -15.99)" fill="#fff"/>
+      <path id="Path_16" data-name="Path 16" d="M342.968,122.458a.715.715,0,1,0-1,1.017,5.7,5.7,0,0,1,0,8.068.714.714,0,1,0,1,1.014,7.125,7.125,0,0,0,0-10.1Z" transform="translate(-326.496 -117.509)" fill="#fff"/>
+      <path id="Path_17" data-name="Path 17" d="M388.085,77.332a.715.715,0,1,0-1.007,1.014,8.524,8.524,0,0,1,0,12.1.715.715,0,0,0,1.007,1.014,9.955,9.955,0,0,0,0-14.127Z" transform="translate(-369.598 -74.396)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

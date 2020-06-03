@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="sound-off" transform="translate(-727 -604)">
+    <rect id="box-icon" width="30" height="30" transform="translate(727 604)" fill="#fff" opacity="0"/>
+    <g id="mute" transform="translate(732 609)" opacity="0.3">
+      <path id="Path_13" data-name="Path 13" d="M191.827.718a.715.715,0,0,0-.4-.643.7.7,0,0,0-.757.086L184.341,5.2l7.486,7.486Z" transform="translate(-176.113 0)"/>
+      <path id="Path_14" data-name="Path 14" d="M19.836,18.848,1.264.276a.714.714,0,0,0-1.01,1.01l4.494,4.5H4.33A1.452,1.452,0,0,0,2.9,7.21v5.714A1.433,1.433,0,0,0,4.33,14.354H7.644L14.6,19.911a.729.729,0,0,0,.443.157A.836.836,0,0,0,15.359,20a.715.715,0,0,0,.4-.643V16.792l3.066,3.066a.715.715,0,1,0,1.011-1.01Z" transform="translate(-0.045 -0.064)"/>
+    </g>
+  </g>
+</svg>
