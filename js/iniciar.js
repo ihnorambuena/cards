@@ -13,15 +13,43 @@ function iniciar () {
   document.querySelector("#gameOverTime").classList.remove("visible");
   document.querySelector("#body").classList.remove("bg-body");
   document.querySelector("#mov").innerText="00";
-  document.querySelector("#minutos").innerText = "00";
-  document.querySelector("#segundos").innerText = "00";
+
+  document.querySelectorAll(".inter-niv").forEach(function(e) {
+    e.classList.remove("inter-on");
+    if (!modoRelax) {
+        e.classList.add("inter-bloq");
+    } else {
+      e.classList.add("inter-off");
+    }
+  });
+
+  document.querySelectorAll(".inter-niv").forEach(function(e) {
+    if (e.innerText == nivelActual+1) {
+      e.classList.add("inter-on");
+      e.classList.remove("inter-bloq");
+    }
+  });
+
+
+  if (!modoRelax) {
+    document.querySelector("#minutos").innerText = '0' + niveles[nivelActual].minMax;
+
+    var textoSegundosInicial = niveles[nivelActual].segMax;
+    if (niveles[nivelActual].segMax < 10) {
+      textoSegundosInicial = '0' + niveles[nivelActual].segMax;
+    }
+    document.querySelector("#segundos").innerText = textoSegundosInicial;
+
+    iniciarTemporizador(niveles[nivelActual].minMax, niveles[nivelActual].segMax);
+  } else {
+    document.querySelector("#minutos").innerText = "00"
+    document.querySelector("#segundos").innerText = "00"
+    iniciarCronometro();
+  }
 
   document.querySelectorAll(".tarjeta").forEach(function(e) {
     e.addEventListener("click", descubrir);
   });
-
-  // iniciarCronometro();
-  iniciarTemporizador(niveles[nivelActual].minMax, niveles[nivelActual].segMax);
 
   document.addEventListener("keydown", laTecla);
 }
@@ -45,6 +73,35 @@ document.querySelectorAll(".subeNivel").forEach(function(e){
   e.addEventListener ("click", cargaNuevoNivel);
 });
 
+document.querySelectorAll(".iniciaModoNormal").forEach(function(e){
+  e.addEventListener ("click", iniciaJuegoNormal);
+});
+
+document.querySelectorAll(".iniciaModoRelax").forEach(function(e){
+  e.addEventListener ("click", iniciaJuegoRelax);
+});
+
+function iniciaJuegoNormal() {
+  modoRelax = false;
+  estadoNavNiveles = "bloqueado"
+  nivelActual = 0;
+  actualizaNivel();
+  iniciar();
+  document.querySelector("#tiempo").classList.remove("invisible");
+};
+
+function iniciaJuegoRelax() {
+  modoRelax = true;
+  estadoNavNiveles = "desbloqueado"
+  nivelActual = 0;
+  actualizaNivel();
+  iniciar();
+  document.querySelector("#tiempo p").innerText = "Cronómetro";
+  document.querySelectorAll(".inter-niv:not(.inter-on)").forEach(function(e) {
+    e.classList.remove("inter-bloq");
+    e.classList.add("inter-off");
+  });
+};
 
 // ----------------------------
 

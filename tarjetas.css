@@ -31,6 +31,10 @@ header {
   color:rgb(94, 103, 115);
 }
 
+.invisible {
+  display: none;
+}
+
 .btn-config {
   display: flex;
   justify-content: center;
@@ -120,6 +124,15 @@ header {
   margin-left: 10px;
 }
 
+.inter-modoDeJuego {
+  justify-content: space-between;
+}
+
+.inter-modJuego{
+  width: 40%;
+  justify-content: center !important;
+}
+
 .inter-box {
   display: flex;
   justify-content: space-between;
@@ -133,6 +146,15 @@ header {
 
 .inter-box:hover {
   background: rgba(0, 0, 0, .4);
+}
+
+.inter-niveles {
+  justify-content: space-between;
+}
+
+.inter-niv {
+  width: 20px;
+  justify-content: center;
 }
 
 .i-next {
@@ -169,6 +191,15 @@ header {
 
 .inter-on:hover {
   background: #36A864;
+}
+
+.inter-bloq {
+  opacity: .2;
+  cursor: no-drop;
+}
+
+.inter-bloq:hover {
+  background: rgba(0, 0, 0, .3);
 }
 
 main {

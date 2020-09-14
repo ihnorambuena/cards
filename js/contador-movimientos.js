@@ -14,5 +14,8 @@ function maxMovimientos() {
   if (textoMaxMov<10) {
     textoMaxMov = "0" + textoMaxMov;
   }
+  if (modoRelax === true) {
+    textoMaxMov = "∞";
+  }
   document.querySelector("#mov-max").innerText = textoMaxMov;
 }

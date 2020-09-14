@@ -14,10 +14,10 @@ function descubrir(e) {
   document.querySelector("#son-giro").cloneNode().play();
 
   totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
-
   if (estadoPista==="activo") {
     pista();
   }
+
   if (totalDescubiertas.length < 2) {
     return
   }
@@ -37,7 +37,7 @@ function descubrir(e) {
     return
   }
 
-  if (movimientos >= niveles[nivelActual].movimientosMax) {
+  if (movimientos >= niveles[nivelActual].movimientosMax && !modoRelax) {
     estadoCronometro = "detenido";
     estadoTemporizador = "detenido";
     estadoDePartida = "detenido";

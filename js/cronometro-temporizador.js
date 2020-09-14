@@ -25,11 +25,11 @@ function iniciarCronometro () {
     document.querySelector("#minutos").innerText = textoMinutos;
     document.querySelector("#segundos").innerText = textoSegundos;
     if (estadoCronometro==="detenido") {
-      clearInterval(cronometro);
+      clearInterval(cronometrus);
     }
   }
 
-  cronometro = setInterval(actualizarContador, 1000);
+  cronometrus = setInterval(actualizarContador, 1000);
 }
 
 function iniciarTemporizador (min, seg) {

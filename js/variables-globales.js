@@ -18,11 +18,31 @@ var animales = [
 
 var nivelActual = 0;
 var niveles = [
-  {tarjetas: animales[0], movimientosMax:3, minMax: 0, segMax: 20},
-  {tarjetas: animales[0].concat(animales[1]), movimientosMax:8, minMax: 0, segMax: 30},
-  {tarjetas: animales[0].concat(animales[1], animales[2]), movimientosMax:12, minMax: 0, segMax: 40},
-  {tarjetas: animales[0].concat(animales[1], animales[2], animales[3]), movimientosMax:18, minMax: 0, segMax: 50},
-  {tarjetas: animales[0].concat(animales[1], animales[2], animales[3], animales[4]), movimientosMax:25, minMax: 1, segMax: 0}
+  {
+    tarjetas: animales[0],
+    movimientosMax:3, minMax: 0, segMax: 20},
+  {
+    tarjetas: animales[0].concat(
+      animales[1]),
+    movimientosMax:8, minMax: 0, segMax: 30},
+  {
+    tarjetas: animales[0].concat(
+      animales[1],
+      animales[2]),
+    movimientosMax:12, minMax: 0, segMax: 40},
+  {
+    tarjetas: animales[0].concat(
+      animales[1],
+      animales[2],
+      animales[3]),
+    movimientosMax:18, minMax: 0, segMax: 50},
+  {
+    tarjetas: animales[0].concat(
+      animales[1],
+      animales[2],
+      animales[3],
+      animales[4]),
+    movimientosMax:25, minMax: 1, segMax: 0}
 ];
 
 var movimientos = 0;
@@ -32,3 +52,5 @@ var estadoDePartida = "andando";
 var minTemp;
 var segTemp;
 var estadoPista = "inactivo";
+var modoRelax = false;
+var cronometrus;

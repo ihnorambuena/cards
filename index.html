@@ -25,8 +25,8 @@
     <title>Tarjetas</title>
     <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,600&display=swap" rel="stylesheet">
-    <link href="tarjetas.css?t=62" rel="stylesheet">
-    <link href="site.css?t=62" rel="stylesheet" />
+    <link href="tarjetas.css?t=63" rel="stylesheet">
+    <link href="site.css?t=63" rel="stylesheet" />
   </head>
   <body id="body" class="bg-body">
     <header>
@@ -34,7 +34,7 @@
         <div class="flex-left header-element">
           <div id="contador">
             <p>Movimientos</p>
-            <span id="mov">00</span>/<span id="mov-max">03</span>
+            <span id="mov">00</span>/<span id="mov-max">00</span>
           </div>
         </div>
         <div id="tiempo" class="header-element">
@@ -57,7 +57,8 @@
         <div id="bienvenida" class="mensaje bienvenida visible">
           <h2>Bienvenido 👋🏻 </h2>
           <p>Inicia el juego aquí</p>
-          <a class="boton reiniciaJuego">Iniciar Juego</a>
+          <a class="boton iniciaModoNormal">Iniciar Juego</a>
+          <a class="boton btn-secundario iniciaModoRelax">Modo Relax</a>
         </div>
       </div>
       <div id="mesaDeMensajes" class="mesa">
@@ -100,6 +101,31 @@
               <p>Modo de Juego</p>
               <div class="inter-icon i-next"></div>
             </li> -->
+            <!-- <li class="inter-modoDeJuego">
+              <div class="inter-box inter-modJuego modNormal inter-on">
+                <p>Normal</p>
+              </div>
+              <div class="inter-box inter-modJuego modRelax inter-off">
+                <p>Relax</p>
+              </div>
+            </li> -->
+            <li id="inter-niveles" class="inter-niveles">
+              <div class="inter-box inter-niv inter-on">
+                <p class="inter-label">1</p>
+              </div>
+              <div class="inter-box inter-niv inter-bloq">
+                <p class="inter-label">2</p>
+              </div>
+              <div class="inter-box inter-niv inter-bloq">
+                <p class="inter-label">3</p>
+              </div>
+              <div class="inter-box inter-niv inter-bloq">
+                <p class="inter-label">4</p>
+              </div>
+              <div class="inter-box inter-niv inter-bloq">
+                <p class="inter-label">5</p>
+              </div>
+            </li>
             <li id="inter-pista" class="inter-box inter-off">
               <p class="inter-label">Pistas</p>
               <div class="inter-icon i-pista"></div>
@@ -121,15 +147,15 @@
     <audio src="sounds/no.wav" class="sonido" id="son-no" preload="auto"></audio>
     <audio src="sounds/giro.wav" class="sonido" id="son-giro" preload="auto" ></audio>
 
-    <script src="js/variables-globales.js?t=62" async defer></script>
-    <script src="js/menu-configuracion.js?t=62" async defer></script>
-    <script src="js/baraja-reparte.js?t=62" async defer></script>
-    <script src="js/descubrir-comparar.js?t=62" async defer></script>
-    <script src="js/acierto-error.js?t=62" async defer></script>
-    <script src="js/cronometro-temporizador.js?t=62" async defer></script>
-    <script src="js/contador-movimientos.js?t=62" async defer></script>
-    <script src="js/cambia-nivel.js?t=62" async defer></script>
-    <script src="js/finalizar.js?t=62" async defer></script>
-    <script src="js/iniciar.js?t=62" async defer></script>
+    <script src="js/variables-globales.js?t=63" async defer></script>
+    <script src="js/menu-configuracion.js?t=63" async defer></script>
+    <script src="js/baraja-reparte.js?t=63" async defer></script>
+    <script src="js/descubrir-comparar.js?t=63" async defer></script>
+    <script src="js/acierto-error.js?t=63" async defer></script>
+    <script src="js/cronometro-temporizador.js?t=63" async defer></script>
+    <script src="js/contador-movimientos.js?t=63" async defer></script>
+    <script src="js/cambia-nivel.js?t=63" async defer></script>
+    <script src="js/finalizar.js?t=63" async defer></script>
+    <script src="js/iniciar.js?t=63" async defer></script>
   </body>
 </html>

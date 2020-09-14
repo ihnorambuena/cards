@@ -34,6 +34,33 @@ function pista(){
   }
 }
 
+document.querySelectorAll(".inter-niv").forEach(function(e) {
+  e.addEventListener("click", cargaNiveles);
+});
+
+
+function cargaNiveles() {
+  if (modoRelax === false) {
+    return;
+  }
+  estadoCronometro = "detenido";
+  clearInterval(cronometrus);
+  estadoTemporizador = "detenido";
+  nivelActual = parseInt(this.innerText - 1);
+  actualizaNivel();
+  iniciar();
+  document.querySelectorAll(".inter-niv").forEach(function(e) {
+    e.classList.remove("inter-on");
+    e.classList.add("inter-off");
+  });
+  this.classList.add("inter-on");
+  abrirCerrar();
+};
+
+// document.querySelectorAll(".modNormal").forEach(function(e) {
+//   e.addEventListener("click", cargaNiveles);
+// });
+
 function activarFxSonido() {
   document.querySelector("#son-yes").toggleAttribute("muted");
   document.querySelector("#son-no").toggleAttribute("muted");
@@ -56,3 +83,11 @@ function abrirCerrar () {
     document.querySelector("#botonConfig img").setAttribute("src", "img/icons/config.svg");
   }
 }
+
+document.addEventListener("keydown", cerrarMenuEsc);
+
+function cerrarMenuEsc(e) {
+  if (e.key === "Escape"){
+    abrirCerrar();
+  }
+};
