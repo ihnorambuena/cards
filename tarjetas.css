@@ -35,6 +35,14 @@ header {
   display: none;
 }
 
+.vh {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  top: 60px;
+}
+
 .btn-config {
   display: flex;
   justify-content: center;
@@ -78,7 +86,7 @@ header {
   left: 0;
   width: 100vw;
   /* height: calc(100vh - 50px); */
-  height: calc((var(--vh, 1vh) * 100) - 50px);
+  height: calc(100 * (var(--vh, 1vh)) - 50px);
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
