@@ -1,13 +1,3 @@
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-document.querySelector(".vh").innerText="vh es: " + vh + "px";
-
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-  document.querySelector(".vh").innerText="vh es: " + vh + "px";
-});
-
 function activarPistas() {
   if (estadoPista === "activo") {
     estadoPista = "inactivo";
