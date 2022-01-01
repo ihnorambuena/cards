@@ -13,6 +13,7 @@ body {
   background: var(--bg);
   font-family: var(--font);
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .bg-body {

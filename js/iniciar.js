@@ -125,6 +125,15 @@ function laTecla (e) {
   carta12 = document.querySelector("#mesa div:nth-child(12) .tarjeta");
   carta13 = document.querySelector("#mesa div:nth-child(13) .tarjeta");
   carta14 = document.querySelector("#mesa div:nth-child(14) .tarjeta");
+  carta15 = document.querySelector("#mesa div:nth-child(15) .tarjeta");
+  carta16 = document.querySelector("#mesa div:nth-child(16) .tarjeta");
+  carta17 = document.querySelector("#mesa div:nth-child(17) .tarjeta");
+  carta18 = document.querySelector("#mesa div:nth-child(18) .tarjeta");
+  carta19 = document.querySelector("#mesa div:nth-child(19) .tarjeta");
+  carta20 = document.querySelector("#mesa div:nth-child(20) .tarjeta");
+  carta21 = document.querySelector("#mesa div:nth-child(21) .tarjeta");
+  carta22 = document.querySelector("#mesa div:nth-child(22) .tarjeta");
+
   if (e.key === "w"){
     descubrir(carta1);
   }
@@ -166,5 +175,29 @@ function laTecla (e) {
   }
   if (e.key === "k"){
     descubrir(carta14);
+  }
+  if (e.key === "z"){
+    descubrir(carta15);
+  }
+  if (e.key === "x"){
+    descubrir(carta16);
+  }
+  if (e.key === "c"){
+    descubrir(carta17);
+  }
+  if (e.key === "v"){
+    descubrir(carta18);
+  }
+  if (e.key === "b"){
+    descubrir(carta19);
+  }
+  if (e.key === "n"){
+    descubrir(carta20);
+  }
+  if (e.key === "m"){
+    descubrir(carta21);
+  }
+  if (e.key === ","){
+    descubrir(carta22);
   }
 }
